@@ -34,6 +34,12 @@ jwt = JWTManager(app)
 # Enable CORS for your app with specific origins
 CORS(app)
 
+CORS(app, resources={r"/*": {"origins": [
+    "http://localhost:3000",  # For local development
+    "https://vm-frontend-phi.vercel.app"
+]}})
+
+
 jwt_blacklist = set()
 
 @app.route('/', methods=['GET'])
