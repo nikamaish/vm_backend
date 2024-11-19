@@ -36,7 +36,7 @@ CORS(app)
 
 CORS(app, resources={r"/*": {"origins": [
     "http://localhost:3000",  # For local development
-    "https://vm-frontend-phi.vercel.app"
+    "https://visual-master.vercel.app"
 ]}})
 
 
